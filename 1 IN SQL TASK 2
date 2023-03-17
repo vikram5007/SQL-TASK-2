@@ -1,0 +1,8 @@
+create table sqltask3(
+ID int primary key,
+NAME varchar(20) unique NOT NULL,
+AGE int check(AGE>18) not null,
+DESIGNATION varchar(10) default 'trainee'
+)
+
+insert into sqltask3(ID,NAME,AGE) values(01,'vikram',25)
