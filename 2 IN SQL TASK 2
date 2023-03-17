@@ -1,0 +1,16 @@
+create database sqltask2
+use sqltask2
+
+alter database sqltask2 modify name=renamedsql2
+
+create schema original
+
+create table original.real_table(
+name varchar(20)
+)
+
+exec sp_rename 'original.real_table' , 'fake_table'
+
+create schema original2
+alter schema original2 transfer original.fake_table
+select*from original2.fake_table
