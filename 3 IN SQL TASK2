@@ -16,10 +16,8 @@ insert into sqltask2(NAME,SALARY,INCREMENT) values ('ANTHI',15000,3000)
 
 alter table sqltask2 add REVISED_SALARY_ as (SALARY+INCREMENT)
 
-select * from sqltask2 where SALARY<20000
+select * from sqltask2 where SALARY>20000
 
-select * into FINAL_SALARY from sqltask2
-
-select * into FINAL_SALARY1 from sqltask2 where REVISED_SALARY_ <20000
+select * into FINAL_SALARY1 from sqltask2 where SALARY>20000
 
 select*from FINAL_SALARY1
